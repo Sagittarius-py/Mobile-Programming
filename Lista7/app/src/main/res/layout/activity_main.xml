@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8BC34A"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/cityNameText3"
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityNameText" />
+
+    <EditText
+        android:id="@+id/cityInput"
+        android:layout_width="260dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="City Name"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@+id/findBtn"
+        app:layout_constraintHorizontal_bias="0.661"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout2" />
+
+    <Button
+        android:id="@+id/findBtn"
+        android:layout_width="85dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="28dp"
+        android:background="#A54646"
+        android:foregroundTint="#C51818"
+        android:foregroundTintMode="add"
+        android:shadowColor="#DA2121"
+        android:text="Find"
+        android:textColor="#E32E2E"
+        android:textColorHighlight="#FD1F1F"
+        android:textColorHint="#E31B1B"
+        android:textColorLink="#C81414"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout2"
+        app:rippleColor="#E33737"
+        app:strokeColor="#DF3636" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#4CAF50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityInput">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/todayCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tommorowCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tommorow" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/in2daysCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In Two Days" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <TextView
+        android:id="@+id/cityNameText"
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#9C27B0"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityNameText2" />
+
+    <TextView
+        android:id="@+id/cityNameText2"
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityNameText3" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textIsSelectable="false"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintStart_toEndOf="@+id/imageView1"
+        app:layout_constraintTop_toBottomOf="@+id/cityNameText3" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="390dp"
+        android:layout_height="228dp"
+        android:layout_marginTop="164dp"
+        android:gravity="top"
+        android:textAlignment="center"
+        android:textIsSelectable="true"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityNameText3" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout2"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nysa" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opole" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Warszawa" />
+    </com.google.android.material.tabs.TabLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
